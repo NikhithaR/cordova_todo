@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html >
+<head>
+<title>To Do</title>
+<meta charset="utf-8" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="msapplication-tap-highlight" content="no" />
+<meta name="viewport"
+	content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+<link rel="stylesheet" type="text/css" href="css/index.css" />
+<script src="cordova.js"></script>
+</head>
+<style type="text/css">
+        @import "http://o.aolcdn.com/dojo/1.0/dijit/themes/tundra/tundra.css";
+        @import "http://o.aolcdn.com/dojo/1.0/dojo/resources/dojo.css"
+    </style>
+ 
+    <script type="text/javascript" src="http://o.aolcdn.com/dojo/1.0/dojo/dojo.xd.js"
+        djConfig="parseOnLoad: true"></script>
+ 
+    <script type="text/javascript">
+        dojo.require("dijit.form.DateTextBox");
+    </script>
+ <script src="datetimepicker_css.js"></script>
+<body class="tundra" onload="onLoad()" id="div">
+<script type="text/javascript">
+		app.initialize();
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<div data-role="page">
+<div data-role="header">
+
+</div>
+<p id="do"></p>
+<div class= "table" id="table">
+
+<table id="ToDoListTable" width="350px" >
+		</table>
+</div>
+<div class="app" data-role="content" id="div" >
+ 
+<h1><span style= "color:blue">To-Do List</span></h1>
+<p><input id="List" name="List" type="text" value="" /> </p>
+<input id="demo" type="text" name="date"  dojoType="dijit.form.DateTextBox"
+                required="true"/>
+		<p><input type="button"
+			value="Add to List"  onclick="addList('ToDoListTable');window.plugins.toast.show('Created a Task', 'short', 'bottom', function(a){console.log('toast success: ' + a)});" /> 
+
+<input type="button" value="Delete List" onclick="deleteList('ToDoListTable');window.plugins.toast.show('Work completed', 'short', 'bottom', function(a){console.log('toast success: ' + a)})" /></p>
+
+		
+
+
+
+		<span style="color:blue">Total Work pending </span><a id="pTotal"></a>
+
+</div>
+<script type="text/javascript">
+function onLoad() {
+       document.getElementById("div").style.background = "url('logo.jpg') no-repeat center center ";
+    }
+function addList(myTable) {
+
+			var table = document.getElementById(myTable);
+                        var b = document.getElementById('List').value;
+                        
+			var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+                        var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                        var d = new Date();
+                        var day = days[d.getDay()];
+                        var hr = d.getHours();
+                        var min = d.getMinutes();
+                        if (min < 10) {
+                        min = "0" + min;
+                        }
+                        var ampm = hr < 12 ? "am" : "pm";
+                        var date = d.getDate();
+                        var month = months[d.getMonth()];
+                        var year = d.getFullYear();
+                        //var x = document.getElementById("demo");
+                        var x =hr+":"+ min + ampm + " "+ date ;
+                        //document.getElementById("demo").innerHTML = d;
+			if(b==""||b==null){
+			}else{
+				var rowCount = table.rows.length;
+				var row = table.insertRow(rowCount);
+			var cell1 = row.insertCell(0);
+			var element1 = document.createElement("input");
+			element1.type = "checkbox";
+			element1.name = "chkbox[]";
+			cell1.appendChild(element1);
+			var cell2 = row.insertCell(1);
+			var element2 = document.createElement("label");
+			//element2.type = "textbox";
+                        //element2.style.width = "100%";
+			element2.name = "txtbox[]";
+                        element2.innerHTML = b;
+			cell2.appendChild(element2);
+                        var cell3 = row.insertCell(2);
+			var element3 = document.createElement("label");
+			//element2.type = "textbox";
+                        //element3.style.width = "100%";
+			element3.name = "txtbox[]";
+                        element3.innerHTML = x;
+			cell3.appendChild(element3);
+			var cell4 = row.insertCell(3);
+			var element4 = document.createElement("label");
+			//element2.type = "textbox";
+                       // element4.style.width = "100%";
+			element4.name = "txtbox[]";
+                        element4.innerHTML = demo.value;
+			cell4.appendChild(element4);
+                        var da= d.getDate();
+                        var foo = demo.value;
+			 var arr = foo.split("/"); 
+			if( da == arr[1])
+                        {
+                        window.plugins.toast.show('Do it today itself', 'short', 'top', function(a){console.log('toast success: ' + a)});
+                        }
+                        document.getElementById('demo').value = "";
+			document.getElementById('List').value = "";
+			document.getElementById('pTotal').innerHTML = rowCount + 1;
+			}
+		}
+
+function deleteList(myTable) {
+
+            var table = document.getElementById(myTable);
+            var rowCount = table.rows.length;
+            for(var i=0; i<rowCount; i++) {
+                var row = table.rows[i];
+                var chkbox = row.cells[0].childNodes[0];
+                if(null != chkbox && true == chkbox.checked) {
+                    table.deleteRow(i);
+                    rowCount--;
+                    i--;
+		    document.getElementById('pTotal').innerHTML= rowCount;
+                         
+            }
+            }
+
+        }
+elem.addEventListener("click", deletelist(myTable), false);
+var exec = require('cordova/exec');
+var splashscreen = {
+show:function() {
+exec(null, null, "SplashScreen", "show", []);
+},
+hide:function() {
+exec(null, null, "SplashScreen", "hide", []);
+}
+};
+module.exports = splashscreen;
+
+
+
+
+</script>
+<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+
+</body>
+
+</html>

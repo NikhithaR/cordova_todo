@@ -1,0 +1,157 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'install', '-g', 'plugman' ]
+2 info using npm@1.3.10
+3 info using node@v0.10.25
+4 verbose cache add [ 'plugman', null ]
+5 verbose cache add name=undefined spec="plugman" args=["plugman",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'plugman',
+6 verbose parsed url   path: 'plugman',
+6 verbose parsed url   href: 'plugman' }
+7 silly lockFile 3c17847d-plugman plugman
+8 verbose lock plugman /home/user/.npm/3c17847d-plugman.lock
+9 silly lockFile 3c17847d-plugman plugman
+10 silly lockFile 3c17847d-plugman plugman
+11 verbose addNamed [ 'plugman', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile 9ad59204-plugman plugman@
+14 verbose lock plugman@ /home/user/.npm/9ad59204-plugman.lock
+15 silly addNameRange { name: 'plugman', range: '*', hasData: false }
+16 verbose url raw plugman
+17 verbose url resolving [ 'https://registry.npmjs.org/', './plugman' ]
+18 verbose url resolved https://registry.npmjs.org/plugman
+19 info trying registry request attempt 1 at 14:51:07
+20 verbose etag "93RWVEFJHBPIOCVNK998YK1CE"
+21 http GET https://registry.npmjs.org/plugman
+22 http 304 https://registry.npmjs.org/plugman
+23 silly registry.get cb [ 304,
+23 silly registry.get   { date: 'Wed, 09 Sep 2015 09:21:08 GMT',
+23 silly registry.get     via: '1.1 varnish',
+23 silly registry.get     'cache-control': 'max-age=60',
+23 silly registry.get     etag: '"93RWVEFJHBPIOCVNK998YK1CE"',
+23 silly registry.get     age: '53',
+23 silly registry.get     connection: 'keep-alive',
+23 silly registry.get     'x-served-by': 'cache-sin6921-SIN',
+23 silly registry.get     'x-cache': 'HIT',
+23 silly registry.get     'x-cache-hits': '1',
+23 silly registry.get     'x-timer': 'S1441790468.089996,VS0,VE0',
+23 silly registry.get     vary: 'Accept' } ]
+24 verbose etag plugman from cache
+25 silly addNameRange number 2 { name: 'plugman', range: '*', hasData: true }
+26 silly addNameRange versions [ 'plugman',
+26 silly addNameRange   [ '0.5.6',
+26 silly addNameRange     '0.5.7',
+26 silly addNameRange     '0.5.8',
+26 silly addNameRange     '0.5.9',
+26 silly addNameRange     '0.6.0',
+26 silly addNameRange     '0.6.1',
+26 silly addNameRange     '0.6.2',
+26 silly addNameRange     '0.6.3',
+26 silly addNameRange     '0.7.0',
+26 silly addNameRange     '0.7.1',
+26 silly addNameRange     '0.7.2',
+26 silly addNameRange     '0.7.3',
+26 silly addNameRange     '0.7.4',
+26 silly addNameRange     '0.7.5',
+26 silly addNameRange     '0.7.6',
+26 silly addNameRange     '0.7.7',
+26 silly addNameRange     '0.7.8',
+26 silly addNameRange     '0.7.9',
+26 silly addNameRange     '0.7.10',
+26 silly addNameRange     '0.7.11',
+26 silly addNameRange     '0.7.12',
+26 silly addNameRange     '0.7.13',
+26 silly addNameRange     '0.7.14',
+26 silly addNameRange     '0.8.0',
+26 silly addNameRange     '0.8.1',
+26 silly addNameRange     '0.8.2',
+26 silly addNameRange     '0.9.0',
+26 silly addNameRange     '0.9.1',
+26 silly addNameRange     '0.9.2',
+26 silly addNameRange     '0.9.3',
+26 silly addNameRange     '0.9.4',
+26 silly addNameRange     '0.9.5',
+26 silly addNameRange     '0.9.6',
+26 silly addNameRange     '0.9.7',
+26 silly addNameRange     '0.9.8',
+26 silly addNameRange     '0.9.9',
+26 silly addNameRange     '0.9.10',
+26 silly addNameRange     '0.9.11',
+26 silly addNameRange     '0.9.20',
+26 silly addNameRange     '0.9.21',
+26 silly addNameRange     '0.9.22',
+26 silly addNameRange     '0.9.23',
+26 silly addNameRange     '0.10.0',
+26 silly addNameRange     '0.10.1',
+26 silly addNameRange     '0.11.0',
+26 silly addNameRange     '0.12.0',
+26 silly addNameRange     '0.13.0',
+26 silly addNameRange     '0.14.0',
+26 silly addNameRange     '0.15.0',
+26 silly addNameRange     '0.16.0',
+26 silly addNameRange     '0.17.0',
+26 silly addNameRange     '0.18.0',
+26 silly addNameRange     '0.19.0',
+26 silly addNameRange     '0.20.0',
+26 silly addNameRange     '0.20.1',
+26 silly addNameRange     '0.20.2',
+26 silly addNameRange     '0.21.0',
+26 silly addNameRange     '0.22.0',
+26 silly addNameRange     '0.22.1',
+26 silly addNameRange     '0.22.2',
+26 silly addNameRange     '0.22.4',
+26 silly addNameRange     '0.22.5',
+26 silly addNameRange     '0.22.6',
+26 silly addNameRange     '0.22.7',
+26 silly addNameRange     '0.22.8',
+26 silly addNameRange     '0.22.9',
+26 silly addNameRange     '0.22.10',
+26 silly addNameRange     '0.22.11',
+26 silly addNameRange     '0.22.12',
+26 silly addNameRange     '0.22.14',
+26 silly addNameRange     '0.22.15',
+26 silly addNameRange     '0.22.16',
+26 silly addNameRange     '0.22.17',
+26 silly addNameRange     '0.23.0',
+26 silly addNameRange     '0.23.1',
+26 silly addNameRange     '0.23.3',
+26 silly addNameRange     '1.0.0',
+26 silly addNameRange     '1.0.2' ] ]
+27 verbose addNamed [ 'plugman', '1.0.2' ]
+28 verbose addNamed [ '1.0.2', '1.0.2' ]
+29 silly lockFile c231ea79-plugman-1-0-2 plugman@1.0.2
+30 verbose lock plugman@1.0.2 /home/user/.npm/c231ea79-plugman-1-0-2.lock
+31 silly lockFile e01b4cf9-js-org-plugman-plugman-1-0-2-tgz https://registry.npmjs.org/plugman/-/plugman-1.0.2.tgz
+32 verbose lock https://registry.npmjs.org/plugman/-/plugman-1.0.2.tgz /home/user/.npm/e01b4cf9-js-org-plugman-plugman-1-0-2-tgz.lock
+33 verbose addRemoteTarball [ 'https://registry.npmjs.org/plugman/-/plugman-1.0.2.tgz',
+33 verbose addRemoteTarball   'a9ec91f15bb92e665248444bbf4064ab95bc9453' ]
+34 silly lockFile e01b4cf9-js-org-plugman-plugman-1-0-2-tgz https://registry.npmjs.org/plugman/-/plugman-1.0.2.tgz
+35 silly lockFile e01b4cf9-js-org-plugman-plugman-1-0-2-tgz https://registry.npmjs.org/plugman/-/plugman-1.0.2.tgz
+36 silly lockFile c231ea79-plugman-1-0-2 plugman@1.0.2
+37 silly lockFile c231ea79-plugman-1-0-2 plugman@1.0.2
+38 silly lockFile 9ad59204-plugman plugman@
+39 silly lockFile 9ad59204-plugman plugman@
+40 error Error: EACCES, mkdir '/home/user/tmp/npm-7534-FS3U0eH4'
+40 error  { [Error: EACCES, mkdir '/home/user/tmp/npm-7534-FS3U0eH4']
+40 error   errno: 3,
+40 error   code: 'EACCES',
+40 error   path: '/home/user/tmp/npm-7534-FS3U0eH4' }
+41 error Please try running this command again as root/Administrator.
+42 error System Linux 3.13.0-24-generic
+43 error command "/usr/bin/nodejs" "/usr/bin/npm" "install" "-g" "plugman"
+44 error cwd /home/user/development/First
+45 error node -v v0.10.25
+46 error npm -v 1.3.10
+47 error path /home/user/tmp/npm-7534-FS3U0eH4
+48 error code EACCES
+49 error errno 3
+50 error stack Error: EACCES, mkdir '/home/user/tmp/npm-7534-FS3U0eH4'
+51 verbose exit [ 3, true ]

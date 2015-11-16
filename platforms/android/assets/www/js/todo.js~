@@ -1,0 +1,12 @@
+
+function todo() {
+	var v1 = document.getElementById('Task').value;
+	var v2 = document.getElementById('Create').value;
+	if (!v1) {
+		alert('Create a task',null,"ToDo",'Create');
+	} else {
+		alert('Task created');
+	}
+}
+
+
